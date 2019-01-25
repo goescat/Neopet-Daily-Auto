@@ -114,3 +114,4 @@ driver.get("http://www.neopets.com/freebies/index.phtml")
 #塔拉的寶藏
 driver.get("http://www.neopets.com/freebies/tarlastoolbar.phtml?greeting=CyodrakesGaze")
 
+driver.close()
