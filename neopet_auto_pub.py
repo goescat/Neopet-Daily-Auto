@@ -2,14 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-driver = webdriver.Chrome("your chromedriver path")
+driver = webdriver.Chrome("your webdriver path")
 driver.get("http://www.neopets.com/login/index.phtml")
 driver.maximize_window()
 
 #登入
-elem = driver.find_element_by_xpath("//*[@id=\"content\"]/table/tbody/tr/td/div[3]/div[4]/form/div/div[1]/div[2]/input")
+elem = driver.find_element_by_xpath("//div[@class='welcomeLoginUsernameInput']/input")
 elem.send_keys("username")
-elem = driver.find_element_by_xpath("//*[@id=\"content\"]/table/tbody/tr/td/div[3]/div[4]/form/div/div[2]/div[2]/input")
+elem = driver.find_element_by_xpath("//div[@class='welcomeLoginPasswordInput']/input")
 elem.send_keys("password")
 elem = driver.find_element_by_class_name("welcomeLoginButton")
 elem.click()
