@@ -40,6 +40,11 @@ except:
 
 #遺忘的海灘
 driver.get("http://www.neopets.com/pirates/forgottenshore.phtml")
+try:
+    elem = driver.find_element_by_xpath("//div[@id='shore_np']")
+    elem.click()
+except:
+    print("已領過獎品，跳過。")
 
 #水果機
 driver.get("http://www.neopets.com/desert/fruit/index.phtml")
